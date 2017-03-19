@@ -11,18 +11,20 @@ class ArmorSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """
-        Create and return a new `Snippet` instance, given the validated data.
+        Create and return a new Armor, given the validated data.
         """
         return Armor.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         """
-        Update and return an existing `Snippet` instance, given the validated data.
+        Update and return an existing Armor, given the validated data.
         """
-        instance.title = validated_data.get('title', instance.title)
-        instance.code = validated_data.get('code', instance.code)
-        instance.linenos = validated_data.get('linenos', instance.linenos)
-        instance.language = validated_data.get('language', instance.language)
-        instance.style = validated_data.get('style', instance.style)
+        instance.name = validated_data.get('name', instance.name)
+        instance.price = validated_data.get('price', instance.price)
+        instance.armorClass = validated_data.get('armorClass', instance.armorClass)
+        instance.armorType = validated_data.get('armorType', instance.armorType)
+        instance.weight = validated_data.get('weight', instance.weight)
+        instance.stealth = validated_data.get('stealth', instance.stealth)
+        instance.about = validated_data.get('about', instance.about)
         instance.save()
         return instance
