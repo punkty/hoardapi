@@ -2,12 +2,29 @@ from __future__ import unicode_literals
 from rest_framework import serializers
 
 
-from resources.models import Armor
+from .models import (
+    Armor,
+    MagicProperty,
+    Stats,
+    Weapon,
+)
 
 class ArmorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Armor
-        fields = ('id', 'name', 'price', 'armorClass', 'armorType', 'weight', 'stealth', 'about')
+        fields = (
+                'id', 
+                'name', 
+                'price', 
+                'armorClass', 
+                'armorType', 
+                'weight', 
+                'stealth', 
+                'about',
+                'magical',
+                'stats', 
+
+        )
 
     def create(self, validated_data):
         """
@@ -28,3 +45,21 @@ class ArmorSerializer(serializers.ModelSerializer):
         instance.about = validated_data.get('about', instance.about)
         instance.save()
         return instance
+
+class StatsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Stats
+        fields = (
+            'id', 
+            'charisma',
+            'constitution', 
+            'defense',
+            'luck',
+            'perception',
+            'strength',
+            'willpower',
+            'wisdom',
+            'armors',
+            'weapons',
+            )

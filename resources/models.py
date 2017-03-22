@@ -22,44 +22,78 @@ class Armor(DateTimeModel):
 
     def __unicode__(self):
         return self.name
-    name = models.CharField(max_length=100)
+   
     # i.e. Platemail
+    name = models.CharField(max_length=100)
+    
+    # how much gold silver and or copper pices it would trade for. i.e. 3gp 10sp 3cp
     price = models.CharField(max_length=100)
-    # suggested base price of this item
-    armorClass = models.CharField(max_length=100)
+    
     # how protective the armor is
-    armorType = models.CharField(choices=ARMOR_TYPES, max_length=100)
+    armorClass = models.CharField(max_length=100)
+    
     # Light, Medium, or Heavy
-    weight = models.CharField(max_length=100)
+    armorType = models.CharField(choices=ARMOR_TYPES, max_length=100)
+    
     # how heavy the armor is
-    stealth = models.CharField(max_length=100)
+    weight = models.CharField(max_length=100)
+    
     # (dis)advantages to being sneaky
-    about = models.CharField(max_length=200)
+    stealth = models.CharField(max_length=100)
+    
     # About is a description of the Armor
+    about = models.CharField(max_length=200)
+
+    # set to True if armor contains magical properties
+    magical = models.BooleanField(default=False)
+    
     # stats, str, dex, wis, may require Many to Many field and new model
 
 class Weapon(DateTimeModel):
     """
     Instruments for fighting monsters. i.e. Greatsword.
     """
+    # Name of the weapon. i.e. Battle Axe, Excalibur, etc.
     name = models.CharField(max_length=100)
+
+    # how much gold silver and or copper pices it would trade for. i.e. 3gp 10sp 3cp
     price = models.CharField(max_length=100)
+
+    # how much damage this weapon inflicts on a successful strike or possibly a range
     damage = models.CharField(max_length=50)
+
+    # how heavy this weapon is
     weight = models.CharField(max_length=100)
-    properties = models.CharField(max_length=100)
 
-class MagicProperties(DateTimeModel):
-    bane = models.BooleanField(default=False)
-    defending = models.BooleanField(default=False)
-    flaming = models.BooleanField(default=False)
-    frost = models.BooleanField(default=False)
-    electric = models.BooleanField(default=False)
-    spell_storing = models.BooleanField(default=False)
-    elemental_burst = models.BooleanField(default=False)
-    elemental = models.BooleanField(default=False)
-    unholy = models.BooleanField(default=False)
-    holy = models.BooleanField(default=False)
-    speed = models.BooleanField(default=False)
-    wounding = models.BooleanField(default=False)
+class MagicProperty(DateTimeModel):
+    """
+    The properties that make a particular item 'Magical'
+    """
+    # name of the magical propery i.e. Flaming, Unholy, Poison, ...
+    name = models.CharField(max_length=100)
 
+    # brief description about what this magical property does
+    about = models.CharField(max_length=200)
+
+    # a list of weapons that carry this property
+    weapons = models.ManyToManyField(Weapon, related_name="magical_properties")
+
+    # a list of armors that carry this property
+    armors = models.ManyToManyField(Armor, related_name="magical_properties")
+    
+class Stats(DateTimeModel):
+    """
+    Stat bonuses that accompany a piece of armor or weapon.
+    """
+    charisma = models.IntegerField(default=0)
+    constitution = models.IntegerField(default=0)
+    defense = models.IntegerField(default=0)
+    dexterity = models.IntegerField(default=0)
+    luck = models.IntegerField(default=0)
+    perception = models.IntegerField(default=0)
+    strength = models.IntegerField(default=0)
+    willpower = models.IntegerField(default=0)
+    wisdom = models.IntegerField(default=0)
+    armors = models.OneToOneField(Armor, on_delete=models.CASCADE, related_name="stats")
+    weapons = models.OneToOneField(Weapon, on_delete=models.CASCADE, related_name="stats")
     
