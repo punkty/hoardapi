@@ -94,6 +94,4 @@ class Stats(DateTimeModel):
     strength = models.IntegerField(default=0)
     willpower = models.IntegerField(default=0)
     wisdom = models.IntegerField(default=0)
-    armors = models.OneToOneField(Armor, on_delete=models.CASCADE, related_name="stats")
-    weapons = models.OneToOneField(Weapon, on_delete=models.CASCADE, related_name="stats")
     

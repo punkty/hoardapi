@@ -9,7 +9,26 @@ from .models import (
     Weapon,
 )
 
+class StatsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Stats
+        fields = (
+            'id', 
+            'charisma',
+            'constitution', 
+            'defense',
+            'dexterity',
+            'luck',
+            'perception',
+            'strength',
+            'willpower',
+            'wisdom',
+            )
+
 class ArmorSerializer(serializers.ModelSerializer):
+    stats = StatsSerializer(many=True)
+
     class Meta:
         model = Armor
         fields = (
@@ -30,7 +49,13 @@ class ArmorSerializer(serializers.ModelSerializer):
         """
         Create and return a new Armor, given the validated data.
         """
-        return Armor.objects.create(**validated_data)
+        armor_stats = validated_data.pop('stats')
+        armor = Armor.objects.create(**validated_data)
+
+        for stat in armor_stats:
+            armor, created = Armor.objects.get_orcreate(name=armor['name'])
+            armor.stats.add(stat)
+        return armor
 
     def update(self, instance, validated_data):
         """
@@ -43,23 +68,7 @@ class ArmorSerializer(serializers.ModelSerializer):
         instance.weight = validated_data.get('weight', instance.weight)
         instance.stealth = validated_data.get('stealth', instance.stealth)
         instance.about = validated_data.get('about', instance.about)
+        instance.stats = validated_data.get('stats', instance.stats)
         instance.save()
         return instance
-
-class StatsSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Stats
-        fields = (
-            'id', 
-            'charisma',
-            'constitution', 
-            'defense',
-            'luck',
-            'perception',
-            'strength',
-            'willpower',
-            'wisdom',
-            'armors',
-            'weapons',
-            )
+        
