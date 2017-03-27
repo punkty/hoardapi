@@ -53,7 +53,7 @@ class ArmorSerializer(serializers.ModelSerializer):
         armor = Armor.objects.create(**validated_data)
 
         for stat in armor_stats:
-            armor, created = Armor.objects.get_orcreate(name=armor['name'])
+            stat, created = Armor.objects.get_or_create(name=armor['name'])
             armor.stats.add(stat)
         return armor
 
@@ -71,4 +71,3 @@ class ArmorSerializer(serializers.ModelSerializer):
         instance.stats = validated_data.get('stats', instance.stats)
         instance.save()
         return instance
-        
