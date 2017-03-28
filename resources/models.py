@@ -49,6 +49,7 @@ class Armor(DateTimeModel):
     
     # stats, str, dex, wis, may require Many to Many field and new model
 
+
 class Weapon(DateTimeModel):
     """
     Instruments for fighting monsters. i.e. Greatsword.
@@ -81,9 +82,9 @@ class MagicProperty(DateTimeModel):
     # a list of armors that carry this property
     armors = models.ManyToManyField(Armor, related_name="magical_properties")
     
-class Stats(DateTimeModel):
+class ArmorStats(DateTimeModel):
     """
-    Stat bonuses that accompany a piece of armor or weapon.
+    Stat bonuses that accompany a piece of armor.
     """
     charisma = models.IntegerField(default=0)
     constitution = models.IntegerField(default=0)
@@ -94,4 +95,4 @@ class Stats(DateTimeModel):
     strength = models.IntegerField(default=0)
     willpower = models.IntegerField(default=0)
     wisdom = models.IntegerField(default=0)
-    
+    armor = models.ForeignKey(Armor, related_name='stats', on_delete=models.CASCADE)
