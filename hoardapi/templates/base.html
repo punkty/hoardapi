@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      HOARD API - The Hoard of Things API
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    </style>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/"><img class="navbar-brand chestLogo" src="/static/img/hapiLogo_animated.svg" alt="hoard api"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/documentation">Documentation</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container-fluid" style="margin-top: 60px;">
+      <div class="row center">
+        <div class="jumbotron">
+            <h1>HOARD API</h1>
+            <p class="lead">The Hoard of Things API</p>
+        </div>
+      </div>
+        {% block mainbody %}
+        {% endblock mainbody %}
+    {% block scripts %}
+    {% endblock scripts %}
+  <div class="row">
+        <div class="col-lg-12 footer">
+          <a href="#" target="_blank">&copy; Ty Warren <script type="text/javascript">
+  document.write(new Date().getFullYear());
+</script></a>
+          <span class="pull-right">
+            <a href="//twitter.com/tysoftwaredev" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-dnt="true">Follow me on twitter</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <iframe src="//ghbtns.com/github-btn.html?user=punkty&type=follow"
+      allowtransparency="false" frameborder="0" scrolling="0" width="132" height="20"></iframe></span></p>
+          </div>
+      </div>
+  </body>
+</html>

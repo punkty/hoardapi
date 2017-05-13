@@ -54,13 +54,13 @@ class ArmorStats(DateTimeModel):
     """
     Stat bonuses that accompany a piece of armor.
     """
-    charisma = models.IntegerField(default=0)
-    constitution = models.IntegerField(default=0)
-    defense = models.IntegerField(default=0)
-    dexterity = models.IntegerField(default=0)
-    luck = models.IntegerField(default=0)
-    perception = models.IntegerField(default=0)
-    strength = models.IntegerField(default=0)
-    willpower = models.IntegerField(default=0)
-    wisdom = models.IntegerField(default=0)
+    charisma = models.IntegerField(default=0, blank=True)
+    constitution = models.IntegerField(default=0, blank=True)
+    defense = models.IntegerField(default=0, blank=True)
+    dexterity = models.IntegerField(default=0, blank=True)
+    luck = models.IntegerField(default=0, blank=True)
+    perception = models.IntegerField(default=0, blank=True)
+    strength = models.IntegerField(default=0, blank=True)
+    willpower = models.IntegerField(default=0, blank=True)
+    wisdom = models.IntegerField(default=0, blank=True)
     armor = models.ForeignKey(Armor, related_name='stats', on_delete=models.CASCADE)

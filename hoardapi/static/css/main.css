@@ -1,7 +1,20 @@
-body {
-  background-color: skyblue;
+.center {
+    text-align: center;
 }
 
-h1 {
-  color: skyblue;
+.pad_top {
+    padding-top: 34px;
+}
+
+.pad_bot {
+    padding-bottom: 34px;
+}
+
+.subscribe_btn {
+    margin-left: -100px!;
+}
+
+.chestLogo {
+  padding: 3px;
+  height: 60px;
 }
