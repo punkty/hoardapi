@@ -3,27 +3,18 @@ from django.db import models
 from datetime import datetime
 
 
-ARMOR_TYPES = (
-    ('Light','Light armor'),
-    ('Medium', 'Medium armor'),
-    ('Heavy', 'Heavy armor'),
-)
-
 class DateTimeModel(models.Model):
     """
     Handles created and updated fields
-    """
-    class Meta:
-        abstract = True
-
+    """ 
     created = models.DateTimeField(default=datetime.now, blank=True)
     updated = models.DateTimeField(default=datetime.now, blank=True)
 
+    class Meta:
+        abstract = True
+
 class Armor(DateTimeModel):
     """ Protective clothing i.e. Platemail """
-
-    def __unicode__(self):
-        return self.name
 
     # i.e. Platemail
     name = models.CharField(max_length=100)
@@ -32,10 +23,15 @@ class Armor(DateTimeModel):
     price = models.CharField(max_length=100)
 
     # how protective the armor is
-    armorClass = models.CharField(max_length=100)
+    armor_class = models.CharField(max_length=100)
 
+    ARMOR_TYPES = (
+    ('Light','Light armor'),
+    ('Medium', 'Medium armor'),
+    ('Heavy', 'Heavy armor'),
+    )
     # Light, Medium, or Heavy
-    armorType = models.CharField(choices=ARMOR_TYPES, max_length=100)
+    armor_type = models.CharField(choices=ARMOR_TYPES, max_length=100)
 
     # how heavy the armor is
     weight = models.CharField(max_length=100)
@@ -44,12 +40,10 @@ class Armor(DateTimeModel):
     stealth = models.CharField(max_length=100)
 
     # About is a description of the Armor
-    about = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
 
     # set to True if armor contains magical properties
     magical = models.BooleanField(default=False)
-
-    # stats, str, dex, wis, may require Many to Many field and new model
 
 
 class ArmorStats(DateTimeModel):
@@ -66,3 +60,33 @@ class ArmorStats(DateTimeModel):
     willpower = models.IntegerField(default=0, blank=True)
     wisdom = models.IntegerField(default=0, blank=True)
     armor = models.ForeignKey(Armor, related_name='stats', on_delete=models.CASCADE)
+
+class Potion(DateTimeModel):
+    """ 
+    A small ornament or item, usually mundane and of little value
+    """
+    
+    # i.e. Light Potion of Healing
+    name = models.CharField(max_length=100)
+
+    # i.e. regains some health
+    effect = models.CharField(max_length=200)
+
+    side_effect = models.CharField(max_length=200, default="None", blank=True)
+
+class Trinket(DateTimeModel):
+    """ 
+    A small ornament or item, usually mundane and of little value
+    """
+
+    # i.e. A rabbits foot
+    name = models.CharField(max_length=100)
+
+    # a description of what this trinket is
+    description = models.CharField(max_length=200)
+
+    # set to True if armor contains magical properties
+    magical = models.BooleanField(default=False)
+
+    # if it is magical what does it do
+    effects = models.CharField(max_length=200, blank=True, default="-")

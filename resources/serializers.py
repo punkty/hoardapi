@@ -3,9 +3,9 @@ from rest_framework import serializers
 
 from .models import (
     Armor,
-    # MagicProperty,
     ArmorStats,
-    # Weapon,
+    Potion,
+    Trinket,
 )
 
 class ArmorStatsSerializer(serializers.ModelSerializer):
@@ -14,7 +14,7 @@ class ArmorStatsSerializer(serializers.ModelSerializer):
         model = ArmorStats
         fields = (
             'charisma',
-            'constitution', 
+            'constitution',
             'defense',
             'dexterity',
             'luck',
@@ -32,11 +32,11 @@ class ArmorSerializer(serializers.ModelSerializer):
         fields = (
                 'name',
                 'price',
-                'armorClass',
-                'armorType',
+                'armor_class',
+                'armor_type',
                 'weight',
                 'stealth',
-                'about',
+                'description',
                 'magical',
                 'stats',
         )
@@ -59,11 +59,35 @@ class ArmorSerializer(serializers.ModelSerializer):
         """
         armor.name = validated_data.get('name', armor.name)
         armor.price = validated_data.get('price', armor.price)
-        armor.armorClass = validated_data.get('armorClass', armor.armorClass)
-        armor.armorType = validated_data.get('armorType', armor.armorType)
+        armor.armor_class = validated_data.get('armor_class', armor.armorClass)
+        armor.armor_type = validated_data.get('armor_type', armor.armorType)
         armor.weight = validated_data.get('weight', armor.weight)
         armor.stealth = validated_data.get('stealth', armor.stealth)
-        armor.about = validated_data.get('about', armor.about)
+        armor.description = validated_data.get('description', armor.description)
         armor.stats = validated_data.get('stats', armor.stats)
         armor.save()
         return armor
+
+class PotionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Potion
+        fields = (
+            'name',
+            'effect',
+            'side_effect',
+            )
+
+
+class TrinketSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Trinket
+        fields = (
+            'name',
+            'description',
+            'magical',
+            'effects',
+            )
+
+
