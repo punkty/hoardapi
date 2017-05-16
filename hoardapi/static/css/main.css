@@ -51,13 +51,6 @@
   z-index: -1; 
 }
 
-.jumbobg {
-    background-image: url('../img/treasure.jpeg');
-    background-size: cover;
-    background-position: 50% 65%;
-}
-
-
 .textbg {
     width: 60%;
     background: black
@@ -67,3 +60,4 @@
     border:none;
     border-radius: 0;
 }
+

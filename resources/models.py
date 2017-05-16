@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
+from datetime import datetime
+
 
 ARMOR_TYPES = (
     ('Light','Light armor'),
@@ -14,8 +16,8 @@ class DateTimeModel(models.Model):
     class Meta:
         abstract = True
 
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(default=datetime.now, blank=True)
+    updated = models.DateTimeField(default=datetime.now, blank=True)
 
 class Armor(DateTimeModel):
     """ Protective clothing i.e. Platemail """

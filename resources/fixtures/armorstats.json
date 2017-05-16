@@ -1,0 +1,92 @@
+[
+{
+    "model": "resources.armorstats",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-13T01:06:11.869Z",
+        "updated": "2017-05-13T01:06:11.869Z",
+        "charisma": 0,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 30,
+        "willpower": 0,
+        "wisdom": 0,
+        "armor": 1
+    }
+},
+{
+    "model": "resources.armorstats",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-13T01:08:15.112Z",
+        "updated": "2017-05-13T01:08:15.112Z",
+        "charisma": 0,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 3,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "armor": 2
+    }
+},
+{
+    "model": "resources.armorstats",
+    "pk": 3,
+    "fields": {
+        "created": "2017-05-13T01:11:33.032Z",
+        "updated": "2017-05-13T01:11:33.032Z",
+        "charisma": 3,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 1,
+        "willpower": 0,
+        "wisdom": 0,
+        "armor": 3
+    }
+},
+{
+    "model": "resources.armorstats",
+    "pk": 4,
+    "fields": {
+        "created": "2017-05-16T01:11:33.032Z",
+        "updated": "2017-05-16T01:11:33.032Z",
+        "charisma": 1,
+        "constitution": 1,
+        "defense": 1,
+        "dexterity": 1,
+        "luck": 1,
+        "perception": 1,
+        "strength": 1,
+        "willpower": 1,
+        "wisdom": 1,
+        "armor": 4
+    }
+},
+{
+    "model": "resources.armorstats",
+    "pk": 5,
+    "fields": {
+        "created": "2017-05-16T01:11:33.032Z",
+        "updated": "2017-05-16T01:11:33.032Z",
+        "charisma": 0,
+        "constitution": 5,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "armor": 5
+    }
+}
+]

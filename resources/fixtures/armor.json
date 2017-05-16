@@ -1,0 +1,82 @@
+[
+{
+    "model": "resources.armor",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-13T01:06:11.867Z",
+        "updated": "2017-05-13T01:06:11.867Z",
+        "name": "Wristguard of Giant Strength",
+        "price": "40,000 gp",
+        "armorClass": "0",
+        "armorType": "Medium",
+        "weight": "5 lbs",
+        "stealth": "-",
+        "about": "Magical wristguard that bestows the strength of a giant",
+        "magical": true
+    }
+},
+{
+    "model": "resources.armor",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-13T01:08:15.110Z",
+        "updated": "2017-05-13T01:08:15.110Z",
+        "name": "Master Thief Cape",
+        "price": "30 gp",
+        "armorClass": "3",
+        "armorType": "Light",
+        "weight": "1 lb",
+        "stealth": "+4 Bonus to stealth",
+        "about": "Shadowy cape of the night",
+        "magical": true
+    }
+},
+{
+    "model": "resources.armor",
+    "pk": 3,
+    "fields": {
+        "created": "2017-05-13T01:11:33.030Z",
+        "updated": "2017-05-13T01:11:33.030Z",
+        "name": "Dapper Leather armor",
+        "price": "15 gp",
+        "armorClass": "11",
+        "armorType": "Light",
+        "weight": "9 lbs",
+        "stealth": "--",
+        "about": "Leather armor that fits perfectly to whomever wears it",
+        "magical": true
+    }
+},
+{
+    "model": "resources.armor",
+    "pk": 4,
+    "fields": {
+        "created": "2017-05-16T01:11:33.030Z",
+        "updated": "2017-05-16T01:11:33.030Z",
+        "name": "Jack's All Trade Magical Cap",
+        "price": "300 gp",
+        "armorClass": "-",
+        "armorType": "Light",
+        "weight": "1 lb",
+        "stealth": "--",
+        "about": "A hat that makes you feel like you could do anything while wearing it. It also has a pretty feather sticking out of it.",
+        "magical": true
+    }
+},
+{
+    "model": "resources.armor",
+    "pk": 5,
+    "fields": {
+        "created": "2017-05-16T19:41:08.774Z",
+        "updated": "2017-05-16T19:41:08.774Z",
+        "name": "Battle Helmet",
+        "price": "3 gp",
+        "armorClass": "-",
+        "armorType": "Heavy",
+        "weight": "10 lbs",
+        "stealth": "--",
+        "about": "A helmet for wearing in battle.",
+        "magical": false
+    }
+}
+]
