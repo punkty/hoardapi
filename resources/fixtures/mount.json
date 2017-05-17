@@ -1,0 +1,30 @@
+[
+{
+    "model": "resources.mount",
+    "pk": 1,
+    "fields": {
+        "name": "Horse",
+        "nickname": "Buddy",
+        "type": "Bio",
+        "speed": "50 ft",
+        "max_burden": "255 lbs",
+        "price": "40,000 gp",
+        "health": "80 hp",
+        "description": "Faithful chestnut steed named Buddy"
+    }
+},
+{
+    "model": "resources.mount",
+    "pk": 2,
+    "fields": {
+        "name": "Steam Tank",
+        "nickname": "Destroyer 548",
+        "type": "Mech",
+        "speed": "20ft",
+        "max_burden": "600 lbs",
+        "price": "140,000 gp",
+        "health": "200 hp",
+        "description": "An armored steam powered tank capable of sieging small villages"
+    }
+}
+]
