@@ -3,6 +3,8 @@
     "model": "resources.mount",
     "pk": 1,
     "fields": {
+        "created": "2017-05-18T00:52:10.733Z",
+        "updated": "2017-05-18T00:52:10.733Z",
         "name": "Horse",
         "nickname": "Buddy",
         "type": "Bio",
@@ -17,6 +19,8 @@
     "model": "resources.mount",
     "pk": 2,
     "fields": {
+        "created": "2017-05-18T00:52:10.737Z",
+        "updated": "2017-05-18T00:52:10.737Z",
         "name": "Steam Tank",
         "nickname": "Destroyer 548",
         "type": "Mech",

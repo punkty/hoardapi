@@ -1,0 +1,26 @@
+[
+{
+    "model": "resources.trinket",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-18T01:14:43.463Z",
+        "updated": "2017-05-18T01:14:43.463Z",
+        "name": "Cursed Rabbit foot of Clumsiness",
+        "description": "a soft and fuzzy little rabbit foot that",
+        "magical": true,
+        "effects": "Bestows a curse of clumsiness -1 to dexterity checks"
+    }
+},
+{
+    "model": "resources.trinket",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-18T01:14:43.468Z",
+        "updated": "2017-05-18T01:14:43.468Z",
+        "name": "Lucky Coin",
+        "description": "A special looking coin of no value",
+        "magical": false,
+        "effects": "None"
+    }
+}
+]

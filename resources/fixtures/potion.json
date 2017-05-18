@@ -1,0 +1,24 @@
+[
+{
+    "model": "resources.potion",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-18T00:52:11.239Z",
+        "updated": "2017-05-18T00:52:11.239Z",
+        "name": "Minor Potion of Healing",
+        "effect": "Heals 1d8 of health + 2",
+        "side_effect": "None"
+    }
+},
+{
+    "model": "resources.potion",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-18T00:52:11.243Z",
+        "updated": "2017-05-18T00:52:11.243Z",
+        "name": "Shrinking Potion",
+        "effect": "Shrinks whomever drinks it to half their size",
+        "side_effect": "Achy bones after the potion wears off"
+    }
+}
+]

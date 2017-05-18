@@ -1,0 +1,22 @@
+[
+{
+    "model": "resources.tool",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-18T00:52:11.239Z",
+        "updated": "2017-05-18T00:52:11.239Z",
+        "name": "Minx's EZ Pick Lockpick set",
+        "description": "Hooks and metal probes for messing with a lock"
+    }
+},
+{
+    "model": "resources.tool",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-18T00:52:11.243Z",
+        "updated": "2017-05-18T00:52:11.243Z",
+        "name": "On-The-Go-Adventurer's Sewing Kit",
+        "description": "Thread, needles, a few buttons and patches. Everything needed for some quick tailor work."
+    }
+}
+]
