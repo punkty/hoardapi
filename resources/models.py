@@ -133,6 +133,14 @@ class Trinket(DateTimeModel):
     # if it is magical what does it do
     effects = models.CharField(max_length=200, blank=True, default="-")
 
+class MagicalProperty(DateTimeModel):
+    """
+    i.e. Flaming. An item with this property would appear to be on fire.
+    """
+    name = models.CharField(max_length=100)
+
+    description = models.CharField(max_length=200)
+
 
 class Weapon(DateTimeModel):
     """ i.e. Longsword """
@@ -168,6 +176,7 @@ class Weapon(DateTimeModel):
     # set to True if armor contains magical properties
     magical = models.BooleanField(default=False)
 
+    magical_properties = models.ManyToManyField(MagicalProperty, blank=True)
 
 class WeaponStats(DateTimeModel):
     """
@@ -183,13 +192,4 @@ class WeaponStats(DateTimeModel):
     willpower = models.IntegerField(default=0, blank=True)
     wisdom = models.IntegerField(default=0, blank=True)
     weapon = models.ForeignKey(Weapon, related_name='stats', on_delete=models.CASCADE)
-
-class MagicalProperty(DateTimeModel):
-    """
-    i.e. Flaming. An item with this property would appear to be on fire.
-    """
-    name = models.CharField(max_length=100)
-
-    description = models.CharField(max_length=200)
-
-    weapon = models.ForeignKey(Weapon, related_name='magical_properties', many=True)
+    # weapons = models.ManyToManyField(Weapon, related_name='magical_properties', many=True)

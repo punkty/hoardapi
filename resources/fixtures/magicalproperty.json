@@ -1,0 +1,22 @@
+[
+{
+    "model": "resources.magicalproperty",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-19T06:08:52.151Z",
+        "updated": "2017-05-19T06:08:52.151Z",
+        "name": "Flaming",
+        "description": "Enchanted with fire"
+    }
+},
+{
+    "model": "resources.magicalproperty",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-19T06:08:52.156Z",
+        "updated": "2017-05-19T06:08:52.156Z",
+        "name": "Shocking",
+        "description": "Enchanted with electricity"
+    }
+}
+]

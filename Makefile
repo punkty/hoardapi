@@ -10,6 +10,7 @@ load_data:
 		python manage.py loaddata trinket.json
 		python manage.py loaddata weapon.json
 		python manage.py loaddata weaponstats.json
+		python manage.py loaddata magicalproperty.json
 
 migrate_resources:
 		python manage.py makemigrations resources
@@ -32,3 +33,4 @@ dump_data:
 		python manage.py dumpdata resources.trinket > resources/fixtures/trinket.json --indent 4
 		python manage.py dumpdata resources.weapon > resources/fixtures/weapon.json --indent 4
 		python manage.py dumpdata resources.weaponstats > resources/fixtures/weaponstats.json --indent 4
+		python manage.py dumpdata resources.magicalproperty > resources/fixtures/magicalproperty.json --indent 4

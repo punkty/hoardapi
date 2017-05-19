@@ -13,7 +13,8 @@
         "weight": "1 lb",
         "stealth": "",
         "description": "A common dagger that has been exposed to the elements",
-        "magical": false
+        "magical": false,
+        "magical_properties": []
     }
 },
 {
@@ -30,7 +31,8 @@
         "weight": "2 lb",
         "stealth": "",
         "description": "An handaxe typically used for wilderness survival",
-        "magical": false
+        "magical": false,
+        "magical_properties": []
     }
 },
 {
@@ -47,7 +49,8 @@
         "weight": "4 lb",
         "stealth": "",
         "description": "Usually requires two hands to be fired but can be fired from one hand.",
-        "magical": false
+        "magical": false,
+        "magical_properties": []
     }
 },
 {
@@ -55,16 +58,19 @@
     "pk": 4,
     "fields": {
         "created": "2017-05-18T23:40:10.907Z",
-        "updated": "2017-05-18T23:41:02.928Z",
-        "name": "Trident of Endurance",
+        "updated": "2017-05-19T06:30:30.056Z",
+        "name": "Fire Trident of Endurance",
         "price": "6 gp",
         "damage": "1d6",
         "range": "20/60",
         "type": "Martial Melee",
         "weight": "4 lb",
         "stealth": "",
-        "description": "A multi-pronged spear that can be thrown. This one in particular has magical properties that allow the user to be more resilient",
-        "magical": true
+        "description": "A multi-pronged spear that can be thrown. This one in particular has magical properties that allow the user to be more resilient. It is also on fire.",
+        "magical": true,
+        "magical_properties": [
+            1
+        ]
     }
 }
 ]

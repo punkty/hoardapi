@@ -4,7 +4,7 @@ from rest_framework import serializers
 from .models import (
     Armor,
     ArmorStats,
-    MagicalProperty
+    MagicalProperty,
     Mount,
     Potion,
     Tool,
@@ -74,10 +74,11 @@ class ArmorSerializer(serializers.ModelSerializer):
         return armor
 
 class MagicalPropertySerializer(serializers.ModelSerializer):
+
     class Meta:
         model = MagicalProperty
         fields = (
-            'name'
+            'name',
         )
 
 
@@ -162,17 +163,22 @@ class WeaponSerializer(serializers.ModelSerializer):
             'description',
             'magical',
             'magical_properties',
-            'stats'
+            'stats',
             )
     def create(self, validated_data):
         """
         Create and return a new Armor, given the validated data.
         """
         stats_data = validated_data.pop('stats')
+        magical_property_data = validated_data.pop('magical_properties')
         weapon = Weapon.objects.create(**validated_data)
 
         for stat in stats_data:
             WeaponStats.objects.create(weapon=weapon, **stat)
+
+        for magical_property in magical_property_data:
+            MagicalProperty.objects.create(weapon=weapon, **magical_property)
+
         return weapon
 
 
