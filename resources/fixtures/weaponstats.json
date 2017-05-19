@@ -1,2 +1,74 @@
 [
+{
+    "model": "resources.weaponstats",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-18T23:40:11.403Z",
+        "updated": "2017-05-18T23:40:11.403Z",
+        "charisma": 0,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "weapon": 1
+    }
+},
+{
+    "model": "resources.weaponstats",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-18T23:40:11.408Z",
+        "updated": "2017-05-18T23:40:11.408Z",
+        "charisma": 0,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "weapon": 2
+    }
+},
+{
+    "model": "resources.weaponstats",
+    "pk": 3,
+    "fields": {
+        "created": "2017-05-18T23:40:11.409Z",
+        "updated": "2017-05-18T23:40:11.409Z",
+        "charisma": 0,
+        "constitution": 0,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "weapon": 3
+    }
+},
+{
+    "model": "resources.weaponstats",
+    "pk": 4,
+    "fields": {
+        "created": "2017-05-18T23:40:11.410Z",
+        "updated": "2017-05-18T23:40:11.410Z",
+        "charisma": 0,
+        "constitution": 3,
+        "defense": 0,
+        "dexterity": 0,
+        "luck": 0,
+        "perception": 0,
+        "strength": 0,
+        "willpower": 0,
+        "wisdom": 0,
+        "weapon": 4
+    }
+}
 ]

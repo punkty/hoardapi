@@ -4,6 +4,7 @@ from rest_framework import serializers
 from .models import (
     Armor,
     ArmorStats,
+    MagicalProperty
     Mount,
     Potion,
     Tool,
@@ -31,7 +32,6 @@ class ArmorStatsSerializer(serializers.ModelSerializer):
 
 class ArmorSerializer(serializers.ModelSerializer):
     stats = ArmorStatsSerializer(many=True)
-
     class Meta:
         model = Armor
         fields = (
@@ -72,6 +72,13 @@ class ArmorSerializer(serializers.ModelSerializer):
         armor.stats = validated_data.get('stats', armor.stats)
         armor.save()
         return armor
+
+class MagicalPropertySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MagicalProperty
+        fields = (
+            'name'
+        )
 
 
 class MountSerializer(serializers.ModelSerializer):
@@ -141,17 +148,21 @@ class WeaponStatsSerializer(serializers.ModelSerializer):
 
 class WeaponSerializer(serializers.ModelSerializer):
     stats = WeaponStatsSerializer(many=True)
+    magical_properties = MagicalPropertySerializer(many=True)
     class Meta:
         model = Weapon
         fields = (
             'name',
             'price',
             'damage',
+            'range',
             'type',
             'weight',
             'stealth',
             'description',
-            'magical'
+            'magical',
+            'magical_properties',
+            'stats'
             )
     def create(self, validated_data):
         """
@@ -172,6 +183,7 @@ class WeaponSerializer(serializers.ModelSerializer):
         weapon.name = validated_data.get('name', weapon.name)
         weapon.price = validated_data.get('price', weapon.price)
         weapon.damage = validated_data.get('damage', weapon.damage)
+        weapon.range = validated_data.get('range', weapon.range)
         weapon.type = validated_data.get('type', weapon.type)
         weapon.weight = validated_data.get('weight', weapon.weight)
         weapon.stealth = validated_data.get('stealth', weapon.stealth)

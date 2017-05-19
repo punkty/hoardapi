@@ -8,6 +8,8 @@ load_data:
 		python manage.py loaddata potion.json
 		python manage.py loaddata tool.json
 		python manage.py loaddata trinket.json
+		python manage.py loaddata weapon.json
+		python manage.py loaddata weaponstats.json
 
 migrate_resources:
 		python manage.py makemigrations resources

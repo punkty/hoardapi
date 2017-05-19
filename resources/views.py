@@ -25,7 +25,7 @@ class ArmorList(generics.ListCreateAPIView):
     serializer_class = ArmorSerializer
 
 
-class ArmorDetail(generics.RetrieveUpdateDestroyAPIView):
+class ArmorDetail(generics.RetrieveAPIView):
     """
     Retrieve, update or delete an armor.
     """

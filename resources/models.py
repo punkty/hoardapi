@@ -61,6 +61,7 @@ class ArmorStats(DateTimeModel):
     wisdom = models.IntegerField(default=0, blank=True)
     armor = models.ForeignKey(Armor, related_name='stats', on_delete=models.CASCADE)
 
+
 class Mount(DateTimeModel):
     """
     Vehicles or animals that aid in travel and carrying.
@@ -144,6 +145,8 @@ class Weapon(DateTimeModel):
     # format XdY where  (the x amount of)d(with y many sides) 1d20
     damage = models.CharField(max_length=100)
 
+    range = models.CharField(max_length=25)
+
     WEAPON_TYPES = (
     ('Simple M','Simple Melee'),
     ('Simple R', 'Simple Ranged'),
@@ -181,11 +184,12 @@ class WeaponStats(DateTimeModel):
     wisdom = models.IntegerField(default=0, blank=True)
     weapon = models.ForeignKey(Weapon, related_name='stats', on_delete=models.CASCADE)
 
+class MagicalProperty(DateTimeModel):
+    """
+    i.e. Flaming. An item with this property would appear to be on fire.
+    """
+    name = models.CharField(max_length=100)
 
-# class MagicalProperty(DateTimeModel):
-#     """
-#     i.e. a flaming quality to a sword.
-#     """
-#     name = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
 
-#     description = models.CharField(max_length=200)
+    weapon = models.ForeignKey(Weapon, related_name='magical_properties', many=True)

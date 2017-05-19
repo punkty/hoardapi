@@ -15,7 +15,7 @@
     "pk": 2,
     "fields": {
         "created": "2017-05-18T00:52:11.243Z",
-        "updated": "2017-05-18T00:52:11.243Z",
+        "updated": "2017-05-18T19:44:46.931Z",
         "name": "Shrinking Potion",
         "effect": "Shrinks whomever drinks it to half their size",
         "side_effect": "Achy bones after the potion wears off"

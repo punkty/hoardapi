@@ -1,2 +1,70 @@
 [
+{
+    "model": "resources.weapon",
+    "pk": 1,
+    "fields": {
+        "created": "2017-05-18T23:40:10.900Z",
+        "updated": "2017-05-18T23:40:10.900Z",
+        "name": "Rusty Dagger",
+        "price": "1 gp",
+        "damage": "1d4",
+        "range": "20/60",
+        "type": "Simple Melee",
+        "weight": "1 lb",
+        "stealth": "",
+        "description": "A common dagger that has been exposed to the elements",
+        "magical": false
+    }
+},
+{
+    "model": "resources.weapon",
+    "pk": 2,
+    "fields": {
+        "created": "2017-05-18T23:40:10.905Z",
+        "updated": "2017-05-18T23:40:10.905Z",
+        "name": "Survival Hatchet",
+        "price": "5 gp",
+        "damage": "1d6",
+        "range": "20/60",
+        "type": "Simple Melee",
+        "weight": "2 lb",
+        "stealth": "",
+        "description": "An handaxe typically used for wilderness survival",
+        "magical": false
+    }
+},
+{
+    "model": "resources.weapon",
+    "pk": 3,
+    "fields": {
+        "created": "2017-05-18T23:40:10.906Z",
+        "updated": "2017-05-18T23:40:10.906Z",
+        "name": "Crossbow, Light",
+        "price": "25 gp",
+        "damage": "1d6",
+        "range": "80/320",
+        "type": "Simple Ranged",
+        "weight": "4 lb",
+        "stealth": "",
+        "description": "Usually requires two hands to be fired but can be fired from one hand.",
+        "magical": false
+    }
+},
+{
+    "model": "resources.weapon",
+    "pk": 4,
+    "fields": {
+        "created": "2017-05-18T23:40:10.907Z",
+        "updated": "2017-05-18T23:41:02.928Z",
+        "name": "Trident of Endurance",
+        "price": "6 gp",
+        "damage": "1d6",
+        "range": "20/60",
+        "type": "Martial Melee",
+        "weight": "4 lb",
+        "stealth": "",
+        "description": "A multi-pronged spear that can be thrown. This one in particular has magical properties that allow the user to be more resilient",
+        "magical": true
+    }
+}
 ]
