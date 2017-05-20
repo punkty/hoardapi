@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from resources.models import (
     Armor,
+    MagicalProperty,
     Mount,
     Potion,
     Tool,
@@ -10,6 +11,7 @@ from resources.models import (
 )
 from resources.serializers import (
     ArmorSerializer,
+    MagicalPropertySerializer,
     MountSerializer,
     PotionSerializer,
     ToolSerializer,
@@ -17,7 +19,7 @@ from resources.serializers import (
     WeaponSerializer,
 )
 
-class ArmorList(generics.ListCreateAPIView):
+class ArmorList(generics.ListAPIView):
     """
     List all the armors.
     """
@@ -25,21 +27,36 @@ class ArmorList(generics.ListCreateAPIView):
     serializer_class = ArmorSerializer
 
 
-class ArmorDetail(generics.RetrieveAPIView):
+class Armor(generics.RetrieveAPIView):
     """
-    Retrieve, update or delete an armor.
+    Retrieve an Armor.
     """
     queryset = Armor.objects.all()
     serializer_class = ArmorSerializer
 
+class MagicalPropertyList(generics.ListAPIView):
+    """
+    List all Magical properties
+    """
+    queryset = MagicalProperty.objects.all()
+    serializer_class = MagicalPropertySerializer
+
+class MagicalProperty(generics.RetrieveAPIView):
+    """
+    Retrieve a Magical property
+    """
+    queryset = MagicalProperty.objects.all()
+    serializer_class = MagicalPropertySerializer
+
+
 class MountList(generics.ListAPIView):
     """
-    List all mounts
+    List all Mounts
     """
     queryset = Mount.objects.all()
     serializer_class = MountSerializer
 
-class MountDetail(generics.RetrieveAPIView):
+class Mount(generics.RetrieveAPIView):
     """
     Retrieve single Mount
     """
@@ -53,7 +70,7 @@ class PotionList(generics.ListAPIView):
     queryset = Potion.objects.all()
     serializer_class = PotionSerializer
 
-class PotionDetail(generics.RetrieveAPIView):
+class Potion(generics.RetrieveAPIView):
     """
     Retrieve a potion.
     """
@@ -67,7 +84,7 @@ class ToolList(generics.ListAPIView):
     queryset = Tool.objects.all()
     serializer_class = ToolSerializer
 
-class ToolDetail(generics.RetrieveAPIView):
+class Tool(generics.RetrieveAPIView):
     """
     Retrieve, a tool.
     """
@@ -81,7 +98,7 @@ class TrinketList(generics.ListAPIView):
     queryset = Trinket.objects.all()
     serializer_class = TrinketSerializer
 
-class TrinketDetail(generics.RetrieveAPIView):
+class Trinket(generics.RetrieveAPIView):
     """
     Retrieve, update or delete a potion.
     """
@@ -95,7 +112,7 @@ class WeaponList(generics.ListAPIView):
     queryset = Weapon.objects.all()
     serializer_class = WeaponSerializer
 
-class WeaponDetail(generics.RetrieveAPIView):
+class Weapon(generics.RetrieveAPIView):
     """
     List all weapons
     """

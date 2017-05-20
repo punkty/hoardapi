@@ -35,6 +35,7 @@ class ArmorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Armor
         fields = (
+                'id',
                 'name',
                 'price',
                 'armor_class',
@@ -78,6 +79,16 @@ class MagicalPropertySerializer(serializers.ModelSerializer):
     class Meta:
         model = MagicalProperty
         fields = (
+            'id',
+            'name',
+            'description',
+        )
+
+class MagicalWeaponPropertySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MagicalProperty
+        fields = (
             'name',
         )
 
@@ -87,6 +98,7 @@ class MountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mount
         fields = (
+            'id',
             'name',
             'nickname',
             'type',
@@ -103,6 +115,7 @@ class PotionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Potion
         fields = (
+            'id',
             'name',
             'effect',
             'side_effect',
@@ -113,6 +126,7 @@ class ToolSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tool
         fields = (
+            'id',
             'name',
             'description',
             )
@@ -123,6 +137,7 @@ class TrinketSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trinket
         fields = (
+            'id',
             'name',
             'description',
             'magical',
@@ -149,10 +164,11 @@ class WeaponStatsSerializer(serializers.ModelSerializer):
 
 class WeaponSerializer(serializers.ModelSerializer):
     stats = WeaponStatsSerializer(many=True)
-    magical_properties = MagicalPropertySerializer(many=True)
+    magical_properties = MagicalWeaponPropertySerializer(many=True)
     class Meta:
         model = Weapon
         fields = (
+            'id',
             'name',
             'price',
             'damage',
