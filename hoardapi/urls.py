@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
+    url(r'^documentation$', views.documentation),
     url(r'^api/', include('resources.urls')),
 ]
