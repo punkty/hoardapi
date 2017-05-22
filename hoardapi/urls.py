@@ -15,11 +15,26 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from . import views
+
+from rest_framework import routers
+from . import views as site_views
+from resources import views as api_views
+
+router = routers.SimpleRouter()
+router.register(r'armor', api_views.ArmorViewSet)
+router.register(r'magicalproperty', api_views.MagicalPropertyViewSet)
+router.register(r'mount', api_views.MountViewSet)
+router.register(r'potion', api_views.PotionViewSet)
+router.register(r'tool', api_views.ToolViewSet)
+router.register(r'trinket', api_views.TrinketViewSet)
+router.register(r'weapon', api_views.WeaponViewSet)
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^documentation$', views.documentation),
-    url(r'^api/', include('resources.urls')),
+    url(r'^$', site_views.index),
+    url(r'^documentation$', site_views.documentation),
+    url(r'^api/', include(router.urls)),
 ]
+urlpatterns += router.urls
