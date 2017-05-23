@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "MagicalProperty",
+    "description": "Accompanying bonus stats to a weapon instance",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "A unique identifer for a weapon",
+            "type": "number"
+        },
+        "name": {
+            "description": "A name for the weapon",
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+    ]
+}
