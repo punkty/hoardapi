@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Armor",
+    "description": "A suit or piece of protective clothing or accessory",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for an armor",
+            "type": "integer"
+        },
+        "name":{
+            "description": "The name of an armor.",
+            "type": "string"
+        },
+        "price":{
+            "description": "The amount of currency this army is worth",
+            "type": "string"
+        },
+        "armor_class": {
+            "description": "A value describing how protective the armor is",
+            "type":"string"
+        },
+        "weigh": {
+            "description": "How much the armor weighs in pounds",
+            "type":"string"
+        },
+        "description": {
+            "description": "Describes physical apperance of the armor",
+            "type":"string"
+        },
+        "magical": {
+            "description": "Whether or not the armor has magical properties",
+            "type":"boolean"
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"boolean"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"boolean"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "price",
+        "armor_class",
+        "weight",
+        "description",
+        "magical",
+        "created",
+        "updated"
+    ]
+}

@@ -23,10 +23,10 @@ class ArmorStatsSerializer(serializers.ModelSerializer):
             'constitution',
             'defense',
             'dexterity',
+            'intelligence',
             'luck',
             'perception',
             'strength',
-            'willpower',
             'wisdom',
             )
 
@@ -154,10 +154,10 @@ class WeaponStatsSerializer(serializers.ModelSerializer):
             'constitution',
             'defense',
             'dexterity',
+            'intelligence',
             'luck',
             'perception',
             'strength',
-            'willpower',
             'wisdom',
             )
 

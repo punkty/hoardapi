@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "ArmorStats",
+    "description": "Accompanying bonus stats to an Armor instance",
+    "type": "object",
+    "properties": {
+        "charisma": {
+            "description": "A number value that modifies how charming or attractive the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "constitution": {
+            "description": "A number value that modifies how much stamina or endurance the wearer has",
+            "type":"number",
+            "minimum": 0
+        },
+        "defense":{
+            "description": "A number value that modifies the wearer's protection",
+            "type":"number",
+            "minimum": 0
+        },
+        "dexterity": {
+            "description": "A number value that modifies how nimble the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "intelligence": {
+            "desription":"A number value that modifies how book smart the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "luck": {
+            "desription":"A number value that modifies how lucky the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "perception": {
+            "desription":"A number value that modifies how aware of surroundings the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "strength": {
+            "desription":"A number value that modifies how physically powerful the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "wisdom": {
+            "desription":"A number value that modifies how street smart the wearer is",
+            "type":"number",
+            "minimum": 0
+        },
+        "armor": {
+            "desription":"A number value that modifies how resilient the wearer is",
+            "type":"number",
+            "minimum": 0
+        }
+    }
+}
