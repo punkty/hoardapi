@@ -6,12 +6,12 @@
     "properties": {
         "name": {
             "description": "A unique name for the magical property",
-            type: "string"
+            "type": "string"
         },
         "description":{
             "desrtipion": "A description of what the magical property does or what it does",
             "type": "string"
-        }}
+        }
     },
     "required":[
         "name",

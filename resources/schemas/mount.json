@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Mount",
+    "description": "Vehicles or animals that aid in travel and carrying.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "A descriptive name of what the mount is. i.e. Horse",
+            "type":"string"
+        },
+        "nickname": {
+            "description": "The name of the mount. i.e. Wendy",
+            "type":"string"
+        },
+        "type": {
+            "description": "Three options Biological, Mechanical, or Summon",
+            "type":"string"
+        },
+        "speed": {
+            "description": "How fast the mount is able to travel",
+            "type":"string"
+        },
+        "max_burden": {
+            "description": "How much the mount is capable of carrying, in weight",
+            "type":"string"
+        },
+        "price": {
+            "description": "How much the mount is worth in currency",
+            "type":"string"
+        },
+        "health": {
+            "description": "The amount of damage the mount can sustain before dying or breaking",
+            "type":"string"
+        },
+        "description": {
+            "description": "The physical appearance of the mount",
+            "type":"string"
+        }
+    },
+    "required": [
+        "name",
+        "type",
+        "speed",
+        "max_burden",
+        "price",
+        "health",
+        "description"
+    ]
+}

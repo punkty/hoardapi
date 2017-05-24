@@ -7,7 +7,8 @@
         "updated": "2017-05-18T00:52:11.239Z",
         "name": "Minor Potion of Healing",
         "effect": "Heals 1d8 of health + 2",
-        "side_effect": "None"
+        "side_effect": "None",
+        "price": "10 sp"
     }
 },
 {
@@ -18,7 +19,8 @@
         "updated": "2017-05-18T19:44:46.931Z",
         "name": "Shrinking Potion",
         "effect": "Shrinks whomever drinks it to half their size",
-        "side_effect": "Achy bones after the potion wears off"
+        "side_effect": "Achy bones after the potion wears off",
+        "price": "30 gp"
     }
 }
 ]

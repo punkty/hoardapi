@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block mainbody %}
+<div class="row">
+<div class="col-sm-2 col-lg-2 col-md-2">
+    <!--<h4>Statistics</h4>
+    <p>Armors: {{armors}}</p>
+    <p>Magical Properties: {{magical_properties}}</p>
+    <p>Mounts: {{mounts}}</p>
+    <p>Potions : {{potions}}</p>
+    <p>Tools: {{tools}}</p>
+    <p>Trinkets: {{trinkets}}</p>
+    <p>Weapons: {{weapons}}</p>-->
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8">
+{% load markdown_deux_tags %}
+{% markdown %}
+{% include "about.md" %}
+{% endmarkdown %}
+</div>
+</div>
+{% endblock mainbody %}

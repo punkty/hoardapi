@@ -105,6 +105,8 @@ class Potion(DateTimeModel):
 
     side_effect = models.CharField(max_length=200, default="None", blank=True)
 
+    price = models.CharField(max_length=100)
+
 
 class Tool(DateTimeModel):
     """

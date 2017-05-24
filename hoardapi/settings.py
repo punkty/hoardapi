@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 CUSTOM_APPS = [
     'rest_framework',
     'resources.apps.ResourcesConfig',
+    'markdown_deux',
 ]
 
 INSTALLED_APPS = [

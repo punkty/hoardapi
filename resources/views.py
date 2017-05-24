@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework import viewsets
+
 from resources.models import (
     Armor,
     MagicalProperty,
@@ -46,3 +47,4 @@ class TrinketViewSet(viewsets.ReadOnlyModelViewSet):
 class WeaponViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Weapon.objects.all()
     serializer_class = WeaponSerializer
+

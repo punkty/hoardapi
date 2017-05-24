@@ -53,6 +53,16 @@
             "desription":"A number value that modifies how resilient the wearer is",
             "type":"number",
             "minimum": 0
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"string",
+            "format":"date-time"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"string",
+            "format":"date-time"
         }
     }
 }

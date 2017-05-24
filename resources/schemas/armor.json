@@ -20,7 +20,7 @@
             "description": "A value describing how protective the armor is",
             "type":"string"
         },
-        "weigh": {
+        "weight": {
             "description": "How much the armor weighs in pounds",
             "type":"string"
         },
@@ -34,11 +34,13 @@
         },
         "created": {
             "description": "The The ISO 8601 formatted date that this armor instances was created",
-            "type":"boolean"
+            "type":"string",
+            "format":"date-time"
         },
         "updated": {
             "description": "The The ISO 8601 formatted date that this armor instances was last updated",
-            "type":"boolean"
+            "type":"string",
+            "format":"date-time"
         }
     },
     "required": [
@@ -48,8 +50,6 @@
         "armor_class",
         "weight",
         "description",
-        "magical",
-        "created",
-        "updated"
+        "magical"
     ]
 }

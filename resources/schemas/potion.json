@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Potion",
+    "description": "A usually liquid mixture that is ingested for a specific effect",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "A name of the Potion",
+            "type": "string"
+        },
+        "effect":{
+            "description": "A description of what the potion does",
+            "type": "string"
+        },
+        "side_effect": {
+            "description": "A description of what the side effects of this potion are if any",
+            "type": "string"
+        },
+        "price": {
+            "description": "How much the potion is worth in currency",
+            "type":"string"
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"string",
+            "format":"date-time"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"string",
+            "format":"date-time"
+        }
+    },
+    "required":[
+        "name",
+        "description"
+    ]
+}

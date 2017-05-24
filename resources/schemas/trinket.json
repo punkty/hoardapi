@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Trinket",
+    "description": "A small figurine or token that may contain magic",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The name of a trinket",
+            "type": "string"
+        },
+        "description":{
+            "description": "A description of what the magical property does or what it does",
+            "type": "string"
+        },
+        "magical": {
+            "description": "Whether not the a trinket is magical",
+            "type":"boolean"
+        },
+        "effects": {
+            "description": "If the trinket is magical what is it capable of doing"
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"string",
+            "format":"date-time"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"string",
+            "format":"date-time"
+        }
+    },
+    "required":[
+        "name",
+        "description",
+        "magical",
+    ]
+}

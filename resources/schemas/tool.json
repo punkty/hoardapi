@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Tool",
+    "description": "Instruments used for aiding in a craft or repair.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "A name of a Tool",
+            "type": "string"
+        },
+        "description":{
+            "description": "A description of what the Tool does or aids with",
+            "type": "string"
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"string",
+            "format":"date-time"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"string",
+            "format":"date-time"
+        }
+    },
+    "required":[
+        "name",
+        "description"
+    ]
+}

@@ -119,6 +119,7 @@ class PotionSerializer(serializers.ModelSerializer):
             'name',
             'effect',
             'side_effect',
+            'price',
             )
 
 class ToolSerializer(serializers.ModelSerializer):

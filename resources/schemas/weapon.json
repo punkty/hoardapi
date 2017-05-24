@@ -11,10 +11,61 @@
         "name": {
             "description": "A name for the weapon",
             "type": "string"
+        },
+        "price": {
+            "description": "A gold value for how much a weapon is worth",
+            "type": "string"
+        },
+        "damage": {
+            "description": "The amount of dice or die that would be rolled to determine how much damage a weapon deals",
+            "type":"string"
+        },
+        "range": {
+            "description": "The distances in feet that this weapon can be fired or thrown. i.e. 20/60 With 60 being the max that would also result in a penalty to hit"
+        },
+        "type": {
+            "description": "A category of the weapon either melee or ranged and martial or simple ",
+            "type":"string"
+        },
+        "weight": {
+            "description": "How much the armor weighs in pounds",
+            "type":"string"
+        },
+        "stealth": {
+            "description": "A value of how much this weapon aids or conflicts in stealthy attacks"
+        },
+        "magical": {
+            "description": "Whether or not the armor has magical properties",
+            "type":"boolean"
+        },
+        "magical_properties": {
+            "description": "A list of MagicalProperty id's ",
+            "type":"array"
+        },
+        "stats": {
+            "description": "A list of attributes the weapon improves for the wielder see api/weaponstats/schema for more information",
+            "type":"array"
+        },
+        "created": {
+            "description": "The The ISO 8601 formatted date that this armor instances was created",
+            "type":"string",
+            "format":"date-time"
+        },
+        "updated": {
+            "description": "The The ISO 8601 formatted date that this armor instances was last updated",
+            "type":"string",
+            "format":"date-time"
         }
     },
     "required": [
         "id",
         "name",
+        "price",
+        "damage",
+        "range",
+        "type",
+        "weight",
+        "description",
+        "magical"
     ]
 }
