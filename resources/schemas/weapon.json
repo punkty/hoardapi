@@ -21,7 +21,8 @@
             "type":"string"
         },
         "range": {
-            "description": "The distances in feet that this weapon can be fired or thrown. i.e. 20/60 With 60 being the max that would also result in a penalty to hit"
+            "description": "The distances in feet that this weapon can be fired or thrown. i.e. 20/60 With 60 being the max that would also result in a penalty to hit",
+            "type":"string"
         },
         "type": {
             "description": "A category of the weapon either melee or ranged and martial or simple ",

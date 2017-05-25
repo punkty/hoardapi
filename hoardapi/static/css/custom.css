@@ -28,13 +28,12 @@
 .jumbotron > h1,
 .jumbotron > h2 {
     color: #fffff0;
-    text-shadow: 3px 3px 3px #0e0e0e;
+    text-shadow: 1px 1px 2px #0e0e0e;
 }
 .jumbotron > h1 {
+    color: #eb6864;
     padding-top: 20px;
     font-size: 5em;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #0e0e0e;
 }
 .jumbotron > h2 {
     padding-bottom: 20px;
@@ -45,7 +44,7 @@
   background: url('../img/treasure.jpeg');
   background-size: cover;
   background-position: 50% 70%;
-  opacity: 0.5;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;

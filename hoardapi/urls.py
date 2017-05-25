@@ -20,7 +20,8 @@ from django.contrib import admin
 from rest_framework import routers
 from . import views as site_views
 from resources import views as api_views
-
+from resources import schemas
+print(schemas)
 
 router = routers.SimpleRouter()
 router.register(r'armor', api_views.ArmorViewSet)
@@ -37,6 +38,15 @@ urlpatterns = [
     url(r'^$', site_views.index),
     url(r'^about$', site_views.about),
     url(r'^documentation$', site_views.documentation),
+    url(r'^api/armor/schema$', schemas.armor),
+    url(r'^api/armorstats/schema$', schemas.armor_stats),
+    url(r'^api/magicalproperty/schema$', schemas.magical_property),
+    url(r'^api/mount/schema$', schemas.mount),
+    url(r'^api/potion/schema$', schemas.potion),
+    url(r'^api/tool/schema$', schemas.tool),
+    url(r'^api/trinket/schema$', schemas.trinket),
+    url(r'^api/weapon/schema$', schemas.weapon),
+    url(r'^api/weaponstats/schema$', schemas.weapon_stats),
     url(r'^api/', include(router.urls)),
 ]
 urlpatterns += router.urls
