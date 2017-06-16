@@ -23,7 +23,7 @@ from resources import views as api_views
 from resources import schemas
 print(schemas)
 
-router = routers.SimpleRouter()
+router = routers.DefaultRouter()
 router.register(r'armor', api_views.ArmorViewSet)
 router.register(r'magicalproperty', api_views.MagicalPropertyViewSet)
 router.register(r'mount', api_views.MountViewSet)
