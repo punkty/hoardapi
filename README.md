@@ -1,4 +1,4 @@
-<img src="https://cdn.rawgit.com/punkty/hoardapi/bc27e60d/hoardapi/static/img/hoardAPIicon.svg" width="250px" />
+<img src="https://cdn.jsdelivr.net/gh/punkty/hoardapi@bc27e60d/hoardapi/static/img/hoardAPIicon.svg" width="250px" />
 
 
 # HOARD API
